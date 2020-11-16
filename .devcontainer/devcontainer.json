@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+{
+	"name": "Bicep",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "latest"
+		}
+	},
+	"runArgs": [],
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/zsh"
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		"ms-vscode.azure-account",
+		"davidanson.vscode-markdownlint",
+		"ms-vscode.powershell",
+		"dandric.vscode-jq",
+		"redhat.vscode-yaml",
+		"dotjoshjohnson.xml",
+    "timonwong.shellcheck",
+    "editorconfig.editorconfig",
+		"/tmp/vscode-bicep.vsix"
+//		"ms-azuretools.vscode-bicep"
+	],
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
